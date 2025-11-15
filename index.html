@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vikash's Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+    body {
+      background: navy;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: #222e42;
+      padding: 15px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      animation: slideDown 1s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 24px;
+      color: #38bdf8;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #efefef;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #38bdf8;
+    }
+
+    
+    #Home {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 60px 10%;
+      animation: fadeIn 2s ease-in;
+    }
+
+    .home-left img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      animation: zoomIn 2s ease-in-out;
+    }
+
+    .home-right {
+      max-width: 600px;
+      margin-top: 20px;
+    }
+
+    .home-h1 {
+      font-size: 3rem;
+      color: aqua;
+      animation: textFade 2s ease-in-out;
+    }
+
+    .home-h6 {
+      font-size: 1.5rem;
+      margin-top: 10px;
+    }
+
+    .home-para {
+      font-weight: 500;
+      font-size: 1.1rem;
+      margin-top: 20px;
+      line-height: 1.5;
+    }
+
+    
+    #about {
+      padding: 60px 10%;
+      animation: fadeIn 2s ease-in;
+    }
+
+    .about-h2 {
+      color: aqua;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .about-para {
+      font-weight: 500;
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+    }
+
+    #btn {
+      background-color: #38bdf8;
+      color: black;
+      font-size: 1.1rem;
+      font-weight: bold;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.5s, background 0.6s;
+    }
+
+    #btn:hover {
+      transform: translateY(-5px);
+      background-color: aqua;
+    }
+
+    #linkk {
+      text-decoration: none;
+      color: black;
+    }
+
+    
+    #skills {
+      padding: 60px 10%;
+      animation: fadeIn 2s ease-in;
+    }
+
+    .skills-h2 {
+      color: aqua;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    #skills-btn, #skills-btn1 {
+      background-color: #38bdf8;
+      color: black;
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    #skills-btn:hover, #skills-btn1:hover {
+      transform: scale(1.1);
+      background: aqua;
+    }
+
+    
+    .projects {
+      padding: 60px 10%;
+      animation: fadeIn 2s ease-in;
+    }
+
+    .projects-h2 {
+      color: aqua;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .project1, .project2 {
+      border: 2px solid black;
+      box-shadow: 5px 5px 10px aqua;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 600px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+      animation: slideUp 2s ease-in;
+    }
+
+    .project1:hover, .project2:hover {
+      transform: translateY(-10px);
+    }
+
+    .project1h3, .project2h3 {
+      color: aquamarine;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .project-para, .project2-para {
+      margin-top: 15px;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    #project-link {
+      text-decoration: none;
+      color: white;
+    }
+
+    
+    #contact {
+      padding: 60px 10%;
+      animation: fadeIn 2s ease-in;
+    }
+
+    .contact-h2 {
+      color: aqua;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .contact-link {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    #contact-link {
+      color: whitesmoke;
+      text-decoration: none;
+    }
+
+    
+    footer {
+      background-color: rgb(41, 197, 145);
+      color: black;
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      animation: slideUp 2s ease-in;
+    }
+
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes textFade {
+      from { color: transparent; }
+      to { color: aqua; }
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .home-right {
+        margin-left: 0;
+        text-align: center;
+      }
+      .home-h1 {
+        font-size: 2rem;
+      }
+      .project1, .project2 {
+        width: 100%;
+      }
+      .footer-para {
+        padding: 10px;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Vikash's Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="Home">
+    <div class="home-left">
+      <img src="https://github.com/vikash-2k25/My-Portifolio/blob/main/vikashh.jpg?raw=true" alt="Vikash" />
+    </div>
+    <div class="home-right">
+      <h1 class="home-h1">Hi, I am Vikash</h1>
+      <h4 class="home-h6">Full Stack Developer</h4>
+      <p class="home-para">
+        A highly motivated Full Stack Developer passionate about creating clean, modern, and user-friendly websites using HTML, CSS3, and JavaScript.
+      </p>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 class="about-h2">About Me</h2>
+    <p class="about-para">
+      I am a Full Stack Developer specializing in creating modern websites and a highly motivated BCA graduate seeking a Web Development Position. I aim to contribute to a company's success by utilizing my skills in HTML, CSS, and JavaScript while effectively collaborating with team members in the IT Industry.
+    </p>
+    <button id="btn">
+      <a href="https://drive.google.com/file/d/1ohOV-bmwJ4WCQVGnE3St133_XkymIU-y/view?usp=sharing" id="linkk">Download Resume =)</a>
+    </button>
+  </section>
+
+  <section id="skills">
+    <h2 class="skills-h2">Skills</h2>
+    <button id="skills-btn1">HTML</button>
+    <button id="skills-btn">CSS</button>
+    <button id="skills-btn">JavaScript</button>
+    <button id="skills-btn">JAVA</button>
+    <button id="skills-btn">Python</button>
+    <button id="skills-btn">DSA with Java</button>
+    <button id="skills-btn">PHP</button>
+    <button id="skills-btn">MYSQL</button>
+    <button id="skills-btn">.NET</button>
+  </section>
+
+  <section class="projects">
+    <h2 class="projects-h2">Projects</h2>
+    <div class="project1">
+      <a href="https://github.com/vikash-2k25" id="project-link">
+        <h3 class="project1h3">Portfolio</h3>
+        <p class="project-para">
+          A fully responsive portfolio website using HTML and CSS showing user’s skills, about, contact, and projects. Includes user-friendly animations.
+        </p>
+      </a>
+    </div>
+
+    <div class="project2">
+      <a href="https://github.com/vikash-2k25/Sudoku-solver-Using-Java" id="project-link">
+        <h3 class="project2h3">Sudoku Solver</h3>
+        <p class="project2-para">
+          A Java project that solves any Sudoku problem using backtracking, demonstrating algorithmic and DSA skills.
+        </p>
+      </a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="contact-h2">Contact</h2>
+    <p class="contact-link">WhatsApp => +91 9259275873</p>
+    <p class="contact-link">
+      Email => <a href="mailto:vikashbhandari259@gmail.com" id="contact-link">vikashbhandari259@gmail.com</a>
+    </p>
+    <p class="contact-link">
+      LinkedIn => <a href="https://www.linkedin.com/in/vikash-bhandari/" id="contact-link">Vikash</a>
+    </p>
+    <p class="contact-link">
+      Github => <a href="https://github.com/vikash-2k25" id="contact-link">vikash-2k25</a>
+    </p>
+    <p class="contact-link">
+      Instagram => <a href="https://www.instagram.com/vikassh_18" id="contact-link">vikashh_18</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>Vikash's Portfolio, All Rights Reserved © 2025</p>
+  </footer>
+</body>
+</html>
